@@ -1,0 +1,25 @@
+{
+  "name": "blueberry-typescript-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HossyWorlds/blueberry-typescript-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HossyWorlds/blueberry-typescript-lab/issues"
+  },
+  "homepage": "https://github.com/HossyWorlds/blueberry-typescript-lab#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
+  }
+}
