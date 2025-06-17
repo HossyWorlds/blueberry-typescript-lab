@@ -49,6 +49,30 @@ function convertCsvToUser(csvData: string): void {
   }
 }
 
+function sequence(start: number, end: number): number[] {
+  let result: number[] = [];
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  return result;
+}
+
+function map(array: number[], callback: (value: number) => number): number[] {
+  const result: number[] = [];
+  for (const elm of array) {
+    result.push(callback(elm));
+  }
+  return result;
+}
+
+function map2<T, U>(array: T[], callback: (value: T) => U): U[] {
+  const result: U[] = [];
+  for (const elm of array) {
+    result.push(callback(elm));
+  }
+  return result;
+}
+
 function main() {
   // for (let i = 1; i <= 100; i++) {
   //   console.log(FizzBuzz(i));
@@ -66,13 +90,15 @@ function main() {
   //   }
   // }
 
-  const csvData: string = `
-  uhyo,26,1
-  John Smith,17,0
-  Mary Sue,14,1
-  `;
+  // const csvData: string = `
+  // uhyo,26,1
+  // John Smith,17,0
+  // Mary Sue,14,1
+  // `;
 
-  convertCsvToUser(csvData);
+  // convertCsvToUser(csvData);
+
+  console.log(sequence(1, 100));
 }
 
 main();
