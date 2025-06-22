@@ -47,12 +47,22 @@ function getSeason(month: number): string {
 }
 
 // 3. enumを使ったswitch文
-enum UserRole {
-  ADMIN = "admin",
-  USER = "user",
-  GUEST = "guest",
-  MODERATOR = "moderator"
-}
+// enum UserRole {
+//   ADMIN = "admin",
+//   USER = "user",
+//   GUEST = "guest",
+//   MODERATOR = "moderator"
+// }
+
+// enumの代替: as const + Union型
+const UserRole = {
+  ADMIN: "admin",
+  USER: "user",
+  GUEST: "guest",
+  MODERATOR: "moderator"
+} as const;
+
+type UserRole = typeof UserRole[keyof typeof UserRole];
 
 function getRolePermissions(role: UserRole): string[] {
   switch (role) {
